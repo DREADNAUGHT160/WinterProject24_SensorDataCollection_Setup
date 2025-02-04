@@ -1,4 +1,4 @@
-# **Big Data Collection System (ROS, Radar, LiDAR, Camera, Disdrometer)**
+# **Data Collection System (ROS, Radar, LiDAR, Camera, Disdrometer)**
 
 ![ROS](https://img.shields.io/badge/ROS-Noetic-blue) ![Python](https://img.shields.io/badge/Python-3.8+-yellow) ![InfluxDB](https://img.shields.io/badge/InfluxDB-Enabled-green)  
 
