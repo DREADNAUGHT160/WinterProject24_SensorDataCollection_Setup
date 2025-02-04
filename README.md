@@ -20,7 +20,7 @@ This system is **ideal for robotics, autonomous vehicles, weather monitoring, an
 - [How It Works](#how-it-works)  
 - [Program Details](#program-details)  
 - [Data Storage](#data-storage)
-- [Disdrometer Filtering](#Disdrometer-Filtering–How-Rain-Based-Filtering-Works)
+- [Disdrometer Filtering](#Disdrometer-Filtering:How-Rain-Based-Filtering-Works)
 - [Analysis Programs](#Analysis-Programs)  
   
 
@@ -172,10 +172,10 @@ After running, your **collected data** will be available in:
 
 ---
 
-## **Disdrometer Filtering  How Rain Based Filtering Works**
+## **Disdrometer Filtering:How Rain Based Filtering Works**
 This project integrates a **disdrometer sensor** with **Radar, LiDAR, and Camera** data collection to **dynamically filter sensor readings** based on weather conditions. The system ensures **accurate data logging** by preventing unnecessary recordings during **heavy rain, snow, or poor visibility conditions**.
 
----
+
 
 ## 📌 **Overview**
 - **Real-time disdrometer readings** control whether sensor data is logged.
@@ -183,7 +183,7 @@ This project integrates a **disdrometer sensor** with **Radar, LiDAR, and Camera
 - **Force-save intervals** ensure data is stored periodically, even in bad weather.
 - **InfluxDB integration** allows efficient time-series data storage.
 
----
+
 
 ## 🛠 **How the Disdrometer Works**
 The **disdrometer** continuously monitors:
@@ -193,7 +193,7 @@ The **disdrometer** continuously monitors:
 
 These values determine whether sensor data should be **collected, paused, or saved**.
 
----
+
 
 ## 🔍 **Filtering Criteria**
 | **Parameter**           | **Threshold**                 | **Effect on Data Collection** |
@@ -203,7 +203,7 @@ These values determine whether sensor data should be **collected, paused, or sav
 | **Precipitation Type** | **Snow/Hail/Heavy Rain**    | 🚫 Stops all sensors except Disdrometer |
 | **Force-Save Interval** | **Reaches time limit**      | ✅ Saves data even if rain is detected |
 
----
+
 
 ## 📊 **Impact on Sensor Data Logging**
 | **Sensor**  | **Filtered by Rain?** | **Condition** |
@@ -213,14 +213,14 @@ These values determine whether sensor data should be **collected, paused, or sav
 | **Camera** | ✅ Yes | Stops when rain **blurs images** |
 | **Disdrometer** | ❌ No | Always records rain data |
 
----
+
 
 ## ⚡ **Force-Save Mechanism**
 - Ensures **data is saved periodically**, regardless of rain conditions.
 - Prevents **gaps in time-series data**.
 - Helps in **long-term sensor fusion analysis**.
 
----
+
 
 ## 📌 **Example Filtering Workflow**
 1️⃣ **Rain Detected (2.5 mm/h, Visibility: 1800m) → Data Collection Stops**  
@@ -228,7 +228,7 @@ These values determine whether sensor data should be **collected, paused, or sav
 3️⃣ **No Rain Detected for 10 Minutes → System Resumes Full Logging**  
 4️⃣ **Force-Save Triggered → Data Stored Regardless of Conditions**  
 
----
+
 
 ## 🚀 **Why Use Rain-Based Filtering?**
 ✅ **Reduces sensor noise** in **LiDAR & Radar**  
@@ -236,19 +236,7 @@ These values determine whether sensor data should be **collected, paused, or sav
 ✅ **Ensures clear images** for camera-based AI models  
 ✅ **Improves sensor fusion accuracy** for robotics & autonomous systems  
 
----
 
-### 📂 **Project Directory Structure**
-```
-/home/carissma/new_ros-workspace/src/my_package/src/
-├── main.py                   # Core data collection system
-├── collection.py             # Manages sensor instances
-├── camera.py                 # Camera image capture & logging
-├── lidar.py                  # LiDAR data processing & filtering
-├── radar.py                  # Radar point cloud logging
-├── disdrometer.py            # Rain filtering logic & sensor integration
-├── sensor_data/              # Collected sensor data stored here
-```
 
 
 ---
