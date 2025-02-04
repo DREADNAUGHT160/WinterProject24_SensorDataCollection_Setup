@@ -177,7 +177,7 @@ This project integrates a **disdrometer sensor** with **Radar, LiDAR, and Camera
 
 
 
-## 📌 **Overview**
+### 📌 **Overview**
 - **Real-time disdrometer readings** control whether sensor data is logged.
 - **Adjustable thresholds** allow fine-tuning of rain detection parameters.
 - **Force-save intervals** ensure data is stored periodically, even in bad weather.
@@ -185,7 +185,7 @@ This project integrates a **disdrometer sensor** with **Radar, LiDAR, and Camera
 
 
 
-## 🛠 **How the Disdrometer Works**
+### 🛠 **How the Disdrometer Works**
 The **disdrometer** continuously monitors:
 - 🌧 **Total Precipitation (mm/h)**
 - 👀 **Visibility (m/h)**
@@ -195,7 +195,7 @@ These values determine whether sensor data should be **collected, paused, or sav
 
 
 
-## 🔍 **Filtering Criteria**
+### 🔍 **Filtering Criteria**
 | **Parameter**           | **Threshold**                 | **Effect on Data Collection** |
 |------------------------|-----------------------------|------------------------------|
 | **Total Precipitation** | **> 1.0 mm/h**              | 🚫 Stops logging to avoid noise in LiDAR/Radar |
@@ -205,7 +205,7 @@ These values determine whether sensor data should be **collected, paused, or sav
 
 
 
-## 📊 **Impact on Sensor Data Logging**
+### 📊 **Impact on Sensor Data Logging**
 | **Sensor**  | **Filtered by Rain?** | **Condition** |
 |------------|---------------------|------------------------|
 | **LiDAR**  | ✅ Yes | Stops when **heavy rain** is detected |
@@ -215,14 +215,14 @@ These values determine whether sensor data should be **collected, paused, or sav
 
 
 
-## ⚡ **Force-Save Mechanism**
+### ⚡ **Force-Save Mechanism**
 - Ensures **data is saved periodically**, regardless of rain conditions.
 - Prevents **gaps in time-series data**.
 - Helps in **long-term sensor fusion analysis**.
 
 
 
-## 📌 **Example Filtering Workflow**
+### 📌 **Example Filtering Workflow**
 1️⃣ **Rain Detected (2.5 mm/h, Visibility: 1800m) → Data Collection Stops**  
 2️⃣ **Light Drizzle (0.5 mm/h, Visibility: 2500m) → Data Collection Continues**  
 3️⃣ **No Rain Detected for 10 Minutes → System Resumes Full Logging**  
@@ -230,7 +230,7 @@ These values determine whether sensor data should be **collected, paused, or sav
 
 
 
-## 🚀 **Why Use Rain-Based Filtering?**
+### 🚀 **Why Use Rain-Based Filtering?**
 ✅ **Reduces sensor noise** in **LiDAR & Radar**  
 ✅ **Saves storage space** by avoiding bad weather data  
 ✅ **Ensures clear images** for camera-based AI models  
