@@ -199,7 +199,7 @@ These values determine whether sensor data should be **collected, paused, or sav
 | **Parameter**           | **Threshold**                 | **Effect on Data Collection** |
 |------------------------|-----------------------------|------------------------------|
 | **Total Precipitation** | **> 1.0 mm/h**              | 🚫 Stops logging to avoid noise in LiDAR/Radar |
-| **Visibility**         | **< 2000 m**                | 🚫 Stops Radar data if visibility is too low |
+| **Visibility**         | **< 2000 m**                | 🚫 Stops data collection if visibility is too low |
 | **Precipitation Type** | **Snow/Hail/Heavy Rain**    | 🚫 Stops all sensors except Disdrometer |
 | **Force-Save Interval** | **Reaches time limit**      | ✅ Saves data even if rain is detected |
 
