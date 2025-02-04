@@ -114,18 +114,65 @@ After running, your **collected data** will be available in:
 ---
 
 ## **Program Details**
-| **Script**         | **Description** |
-|--------------------|---------------|
-| **main.py**        | Central controller that manages data collection. Runs the ROS loop, handles the GUI, and starts/stops sensors. |
-| **start_switch.py**| Tkinter-based interface to start ROS, launch sensors, and start `main.py`. |
-| **collection.py**  | Manages `Camera`, `LiDAR`, `Radar`, and `Disdrometer` objects, handles force-save and rain-based saving logic. |
-| **camera.py**      | Captures images from a camera and saves them as `.jpg`, logs timestamps to CSV, and uploads to InfluxDB. |
-| **lidar.py**       | Reads LiDAR range and intensity data from `/scan`, saves to CSV, and uploads to InfluxDB. |
-| **radar.py**       | Logs radar data (`PointCloud2`) from `/ti_mmwave/radar_scan_pcl_0`, stores in CSV, and uploads to InfluxDB. |
-| **disdrometer.py** | Monitors precipitation, logs rain/no-rain status, and saves visibility, precipitation data to CSV and InfluxDB. |
-| **gui.py**         | Tkinter-based graphical control panel for sensor monitoring and interval adjustments. |
+
+### **1. main.py** (Core Data Collection Manager)  
+**Location:** `/main.py`  
+- Initializes **ROS Node**.  
+- Starts the **GUI and sensor interfaces**.  
+- Manages data collection scheduling and **external processes** (e.g., `disdrometer.py`).  
+- Uses **multi-threading** for concurrent execution.  
+
+### **2. start_switch.py** (Sensor Launch GUI)  
+**Location:** `/start_switch.py`  
+- Provides a **Tkinter GUI** to start/stop ROS, sensors, and the main system.  
+- Verifies **device connections** before launching.  
+- Uses `gnome-terminal` to start processes.  
+
+### **3. collection.py** (Data Collection Manager)  
+**Location:** `/collection.py`  
+- Manages `Camera`, `LiDAR`, `Radar`, and `Disdrometer` objects.  
+- Implements **force-save logic** and **rain-based data collection filters**.  
+
+### **4. camera.py** (Camera Data Logger)  
+**Location:** `/camera.py`  
+- Subscribes to `/usb_cam/image_raw`.  
+- Captures and saves images as `.jpg` and **logs timestamps** in CSV.  
+- **Uploads metadata to InfluxDB**.  
+
+### **5. lidar.py** (LiDAR Data Logger)  
+**Location:** `/lidar.py`  
+- Subscribes to `/scan`.  
+- Extracts **distance and intensity data**, stores it in CSV, and uploads to InfluxDB.  
+
+### **6. radar.py** (Radar Data Logger)  
+**Location:** `/radar.py`  
+- Subscribes to `/ti_mmwave/radar_scan_pcl_0`.  
+- Processes `PointCloud2` data, logs it in CSV, and uploads to InfluxDB.  
+
+### **7. disdrometer.py** (Weather-Based Control)  
+**Location:** `/disdrometer.py`  
+- Reads from a **serial sensor** (Disdrometer).  
+- Determines **rain status** and **logs precipitation data**.  
+- **Controls data logging based on weather conditions**.  
+
+### **8. gui.py** (Graphical Interface)  
+**Location:** `/gui.py`  
+- **Tkinter-based GUI** for system control.  
+- Allows **manual start/stop** of data collection.  
+- Displays **real-time status updates** of each sensor.  
+
+---
+
+## **Data Storage**
+| **Sensor**      | **Storage Format**  | **Location** |
+|----------------|-------------------|--------------|
+| **Radar**      | CSV + InfluxDB    | `sensor_data/radar/` |
+| **LiDAR**      | CSV + InfluxDB    | `sensor_data/lidar/` |
+| **Camera**     | JPG + CSV + InfluxDB | `sensor_data/camera/` |
+| **Disdrometer** | CSV + InfluxDB    | `sensor_data/disdrometer/` |
 
 ---
 
 ## **License**
 This project is open-source under the **MIT License**. 🚀
+
