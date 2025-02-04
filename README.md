@@ -49,7 +49,7 @@ This system is **ideal for robotics, autonomous vehicles, weather monitoring, an
 ├── disdrometer.py            <- Reads rain status and logs precipitation data
 ├── gui.py                    <- Tkinter-based graphical control panel
 ├── sensor_data/              <- Directory storing collected data (CSV, images)
-└── docs/                     <- Additional documentation and resources
+
 ```
 
 ---
