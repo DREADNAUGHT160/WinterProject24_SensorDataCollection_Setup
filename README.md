@@ -38,7 +38,7 @@ This system is **ideal for robotics, autonomous vehicles, weather monitoring, an
 
 ## **Project Structure**
 ```
-your_project/
+/home/carissma/new_ros-workspace/src/my_package/src/
 ├── README.md                 <- Documentation file
 ├── main.py                   <- Core data collection manager
 ├── start_switch.py           <- GUI to start ROS, sensors, and main.py
