@@ -20,10 +20,7 @@ This system is **ideal for robotics, autonomous vehicles, weather monitoring, an
 - [How It Works](#how-it-works)  
 - [Program Details](#program-details)  
 - [Data Storage](#data-storage)  
-- [InfluxDB Integration](#influxdb-integration)  
-- [Troubleshooting](#troubleshooting)  
-- [Future Enhancements](#future-enhancements)  
-- [License](#license)  
+  
 
 ---
 
