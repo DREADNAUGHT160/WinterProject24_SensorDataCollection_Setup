@@ -208,9 +208,9 @@ These values determine whether sensor data should be **collected, paused, or sav
 ### 📊 **Impact on Sensor Data Logging**
 | **Sensor**  | **Filtered by Rain?** | **Condition** |
 |------------|---------------------|------------------------|
-| **LiDAR**  | ✅ Yes | Stops when **heavy rain** is detected |
-| **Radar**  | ✅ Yes | Stops when **visibility < 2000m** |
-| **Camera** | ✅ Yes | Stops when rain **blurs images** |
+| **LiDAR**  | ✅ Yes | Stops when **no rain** is detected |
+| **Radar**  | ✅ Yes | Stops when **no rain** is detected |
+| **Camera** | ✅ Yes | Stops when **no rain** is detected |
 | **Disdrometer** | ❌ No | Always records rain data |
 
 
