@@ -20,7 +20,7 @@ This system is **ideal for robotics, autonomous vehicles, weather monitoring, an
 - [How It Works](#how-it-works)  
 - [Program Details](#program-details)  
 - [Data Storage](#data-storage)
-- [Disdrometer Filtering](#Disdrometer-Filtering:How-Rain-Based-Filtering-Works)
+- [Disdrometer Filtering](#Disdrometer-Filtering)
 - [Analysis Programs](#Analysis-Programs)  
   
 
@@ -172,7 +172,7 @@ After running, your **collected data** will be available in:
 
 ---
 
-## **Disdrometer Filtering:How Rain Based Filtering Works**
+## **Disdrometer Filtering**
 This project integrates a **disdrometer sensor** with **Radar, LiDAR, and Camera** data collection to **dynamically filter sensor readings** based on weather conditions. The system ensures **accurate data logging** by preventing unnecessary recordings during **heavy rain, snow, or poor visibility conditions**.
 
 
