@@ -171,10 +171,10 @@ After running, your **collected data** will be available in:
 
 ---
 ## **Analysis Programs**
-- [Schedular Program](SCHEDULER_README.md)  
-- [Radar Processing Program](Radar_Processing_README.md)  
-- [Camera Processing Program](Camera_Processing_README.md)
-- [Lidar Processing Program](#Analysis-Programs)
+- [Schedular Program](/readme_files/SCHEDULER_README.md)  
+- [Radar Processing Program](/readme_files/Radar_Processing_README.md)  
+- [Camera Processing Program](/readme_files/Camera_Processing_README.md)
+- [Lidar Processing Program](/readme_files/Lidar_Processing_README.md)
 
 ---
 
