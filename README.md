@@ -223,7 +223,7 @@ These values determine whether sensor data should be **collected, paused, or sav
 
 
 ### 📌 **Example Filtering Workflow**
-1️⃣ **Heavy Rain Detected (< Visibility: 1800m) → Data Collection Stops**  
+1️⃣ **Heavy Rain Detected (> Visibility: 1800m) → Data Collection Stops**  
 2️⃣ **Light Drizzle (>0.5 mm/h, ) → Data Collection Continues**  
 3️⃣ **Force-Save Triggered → Data Stored Regardless of Conditions** 
 
