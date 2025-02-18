@@ -6,7 +6,7 @@ This **Integrated LiDAR Processing Program** performs **preprocessing, clusterin
 
 ---
 
-## **📌 Features**
+## **Features**
 ✅ **Reads LiDAR raw data from CSV** and calculates necessary **angles**.  
 ✅ **Converts polar coordinates to Cartesian coordinates (X, Y)**.  
 ✅ **Filters target points based on predefined X, Y range criteria**.  
@@ -18,7 +18,7 @@ This **Integrated LiDAR Processing Program** performs **preprocessing, clusterin
 
 ---
 
-## **📂 File Structure**
+## **File Structure**
 ```
 your_project/
 ├── lidar_processing.py             <- Main LiDAR processing script
@@ -40,7 +40,7 @@ your_project/
 
 ---
 
-## **📥 Installation & Dependencies**
+## **Installation & Dependencies**
 ### **1️⃣ Prerequisites**
 - **Python 3.8+**
 - **InfluxDB setup** (for cloud storage of processed LiDAR data)
@@ -53,7 +53,7 @@ pip install pandas numpy matplotlib scikit-learn psutil influxdb-client
 
 ---
 
-## **⚙️ How It Works**
+## **How It Works**
 
 ### **🔹 Step 1: Angle Calculation**
 - Reads **LiDAR raw data** from `sensor_data/lidar_data_detailed.csv`.
@@ -84,7 +84,7 @@ pip install pandas numpy matplotlib scikit-learn psutil influxdb-client
 
 ---
 
-## **📊 Data Processing Metrics**
+## **Data Processing Metrics**
 | **Metric**       | **Description** |
 |-----------------|----------------|
 | **Angle (degrees)** | Angle of the LiDAR beam during a scan. |
@@ -95,7 +95,7 @@ pip install pandas numpy matplotlib scikit-learn psutil influxdb-client
 
 ---
 
-## **📍 How to Run the Program**
+## **How to Run the Program**
 ### **1️⃣ Start LiDAR Processing**
 ```bash
 python lidar_processing.py
@@ -133,7 +133,7 @@ This program uploads **LiDAR data** to **InfluxDB** for real-time analytics.
 
 ---
 
-## **🛠️ Troubleshooting**
+## **Troubleshooting**
 ### **1️⃣ No angles calculated**
 - Ensure the **input CSV file exists** in `sensor_data/lidar_data_detailed.csv`.
 
@@ -149,7 +149,7 @@ This program uploads **LiDAR data** to **InfluxDB** for real-time analytics.
 
 ---
 
-## **🚀 Future Enhancements**
+## **Future Enhancements**
 📌 **Real-time LiDAR streaming** with ROS.  
 📌 **Advanced clustering techniques** (e.g., DBSCAN, HDBSCAN).  
 📌 **Integration with 3D visualization tools** (e.g., Open3D, PCL).  
@@ -157,28 +157,28 @@ This program uploads **LiDAR data** to **InfluxDB** for real-time analytics.
 
 ---
 
-## **📜 License**
+## **License**
 This project is open-source under the **MIT License**. Feel free to contribute!
 
 ---
 
-### **📧 Need Help?**
+### **Need Help?**
 For questions or contributions, open an **issue** in the GitHub repository! 🚀
 
 ---
 
-## **📌 Program Breakdown**
+## **Program Breakdown**
 
 ### **🔹 PROGRAM 1: MASTER PROGRAM - `master_lidar.py`**
 #### **Overview:**
 This is the **main LiDAR processing program** that handles **data ingestion, preprocessing, target filtering, clustering, 2D visualization, and animation**.
 
-#### **📂 Input File:**
+#### **Input File:**
 ```
 /home/carissma/new_rosworkspace/src/my_package/src/sensor_data/lidar/lidar_data_detailed.csv
 ```
 
-#### **🔧 Functions & Outputs:**
+#### **Functions & Outputs:**
 | **Function** | **Description** | **Output File** |
 |-------------|---------------|----------------|
 | **calculate_angles** | Calculates angles for LiDAR measurements and saves the results. | `/home/carissma/new_rosworkspace/src/Scheduling/lidar/output/lidar_data_detailed_with_angles.csv` |
@@ -191,11 +191,11 @@ This is the **main LiDAR processing program** that handles **data ingestion, pre
 
 ---
 
-### **🔹 PROGRAM 2: UPLOAD SCRIPT - `upload_lidar_data_script_to_influxdb.py`**
+### **PROGRAM 2: UPLOAD SCRIPT - `upload_lidar_data_script_to_influxdb.py`**
 #### **Overview:**
 This script uploads **processed LiDAR data** to an **InfluxDB server** using predefined credentials.
 
-#### **📂 Output:**
+#### **Output:**
 ✔ **Data uploaded to InfluxDB for real-time analytics and cloud storage.**
 
 ---
