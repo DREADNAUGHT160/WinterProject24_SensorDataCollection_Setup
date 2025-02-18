@@ -131,5 +131,5 @@ This project is open-source under the **MIT License**. You are free to modify an
 
 ---
 
-### **📧 Need Help?**
+### **Need Help?**
 For questions or contributions, open an **issue** in the GitHub repository! 🚀
