@@ -6,7 +6,7 @@ This program performs **image quality analysis** by calculating various metrics 
 
 ---
 
-## **📌 Features**
+## **Features**
 ✅ **Loads images from a camera sensor directory**  
 ✅ **Enhances and sharpens images using CLAHE and Gaussian filters**  
 ✅ **Computes multiple image quality metrics:**  
@@ -23,7 +23,7 @@ This program performs **image quality analysis** by calculating various metrics 
 
 ---
 
-## **📂 File Structure**
+## **File Structure**
 ```
 your_project/
 ├── image_processing.py         <- Main script (this program)
@@ -39,7 +39,7 @@ your_project/
 
 ---
 
-## **📥 Installation & Dependencies**
+## **Installation & Dependencies**
 ### **1️⃣ Prerequisites**
 - **Python 3.8+**
 - **InfluxDB setup (optional, for cloud storage of image metrics)**
@@ -52,7 +52,7 @@ pip install opencv-python numpy pupil-apriltags scikit-image influxdb-client
 
 ---
 
-## **⚙️ How It Works**
+## **How It Works**
 1. **Loads images** from the `/sensor_data/camera/` folder.
 2. **Enhances images** using **CLAHE (Contrast Limited Adaptive Histogram Equalization)**.
 3. **Computes multiple metrics** including sharpness, contrast, and brightness.
@@ -64,7 +64,7 @@ pip install opencv-python numpy pupil-apriltags scikit-image influxdb-client
 
 ---
 
-## **📊 Data Processing Metrics**
+## **Data Processing Metrics**
 | **Metric**      | **Description** |
 |----------------|----------------|
 | **Sharpness**  | Measures image clarity using Laplacian variance. |
@@ -77,7 +77,7 @@ pip install opencv-python numpy pupil-apriltags scikit-image influxdb-client
 
 ---
 
-## **📍 How to Run the Program**
+## **How to Run the Program**
 ### **1️⃣ Run the Python Script**
 ```bash
 python image_processing.py
@@ -103,7 +103,7 @@ This program uploads image quality metrics to **InfluxDB** for visualization and
 
 ---
 
-## **🛠️ Troubleshooting**
+## **Troubleshooting**
 ### **1️⃣ Image not loading**
 - Ensure the images exist in `/sensor_data/camera/`
 - Check file format (supports `.jpg`, `.png`, `.jpeg`)
@@ -118,7 +118,7 @@ This program uploads image quality metrics to **InfluxDB** for visualization and
 
 ---
 
-## **🚀 Future Enhancements**
+## **Future Enhancements**
 📌 **Automated Image Quality Filtering**: Discard low-quality images before processing.  
 📌 **Real-Time Processing**: Stream camera feed and analyze frames live.  
 📌 **More AprilTag Families**: Extend support beyond `tag36h11`.  
@@ -126,7 +126,7 @@ This program uploads image quality metrics to **InfluxDB** for visualization and
 
 ---
 
-## **📜 License**
+## **License**
 This project is open-source under the **MIT License**. You are free to modify and distribute it.
 
 ---
