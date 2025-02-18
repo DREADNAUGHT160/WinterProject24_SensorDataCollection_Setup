@@ -17,7 +17,7 @@ This repository contains **two Python programs** for **processing radar data**, 
 
 ---
 
-## **📌 Features**
+## **Features**
 ✅ **Processes radar sensor data** and calculates key metrics.  
 ✅ **Clusters reflectors using DBSCAN** based on **intensity and range**.  
 ✅ **Generates 3D scatter plots** of reflector clusters.  
@@ -28,7 +28,7 @@ This repository contains **two Python programs** for **processing radar data**, 
 
 ---
 
-## **📂 File Structure**
+## **File Structure**
 ```
 your_project/
 ├── radar_algorithm16.py        <- Radar clustering and visualization
@@ -47,7 +47,7 @@ your_project/
 
 ---
 
-## **📥 Installation & Dependencies**
+## **Installation & Dependencies**
 ### **1️⃣ Prerequisites**
 - **Python 3.8+**
 - **InfluxDB setup** (for RadarAlgorithm23)
@@ -60,7 +60,7 @@ pip install pandas numpy scikit-learn matplotlib imageio influxdb-client openpyx
 
 ---
 
-## **⚙️ How It Works**
+## **How It Works**
 
 ### **🔹 RadarAlgorithm16 (Clustering & Visualization)**
 1. **Loads radar data** from `sensor_data/radar_data.csv`.
@@ -79,7 +79,7 @@ pip install pandas numpy scikit-learn matplotlib imageio influxdb-client openpyx
 
 ---
 
-## **📊 Data Processing Metrics**
+## **Data Processing Metrics**
 | **Metric**      | **Description** |
 |----------------|----------------|
 | **Range**      | Distance of the object from the radar. |
@@ -90,7 +90,7 @@ pip install pandas numpy scikit-learn matplotlib imageio influxdb-client openpyx
 
 ---
 
-## **📍 How to Run the Programs**
+## **How to Run the Programs**
 ### **1️⃣ Run Radar Clustering & Visualization (RadarAlgorithm16)**
 ```bash
 python radar_algorithm16.py
@@ -126,7 +126,7 @@ This program uploads **filtered radar data** to **InfluxDB** for visualization.
 
 ---
 
-## **🛠️ Troubleshooting**
+## **Troubleshooting**
 ### **1️⃣ No clusters detected (RadarAlgorithm16)**
 - Adjust **DBSCAN parameters (`eps`, `min_samples`)** to optimize clustering.
 
@@ -139,7 +139,7 @@ This program uploads **filtered radar data** to **InfluxDB** for visualization.
 
 ---
 
-## **🚀 Future Enhancements**
+## **Future Enhancements**
 📌 **Improve clustering** by dynamically tuning DBSCAN parameters.  
 📌 **Integrate real-time radar processing** using ROS and live sensor feeds.  
 📌 **Add support for additional clustering algorithms** (e.g., K-Means, HDBSCAN).  
@@ -147,10 +147,10 @@ This program uploads **filtered radar data** to **InfluxDB** for visualization.
 
 ---
 
-## **📜 License**
+## **License**
 This project is open-source under the **MIT License**. Feel free to contribute!
 
 ---
 
-### **📧 Need Help?**
+### **Need Help?**
 For questions or contributions, open an **issue** in the GitHub repository! 🚀
