@@ -6,7 +6,7 @@ This script automates the execution of multiple Python programs at a scheduled t
 
 ---
 
-## **📌 Features**
+## ** Features**
 ✅ **Runs five different programs in a scheduled manner.**  
 ✅ **Executes at the 50th minute of every hour.**  
 ✅ **Waits between executions to prevent overloading.**  
@@ -15,7 +15,7 @@ This script automates the execution of multiple Python programs at a scheduled t
 
 ---
 
-## **📂 File Structure**
+## ** File Structure**
 ```
 your_project/
 ├── scheduler.py                    <- Main scheduler script (this program)
@@ -31,7 +31,7 @@ your_project/
 
 ---
 
-## **📥 Installation & Dependencies**
+## ** Installation & Dependencies**
 ### **1️⃣ Prerequisites**
 - **Python 3.8+**
 - Ensure all **dependent scripts exist** at the correct file paths.
@@ -45,7 +45,7 @@ pip install subprocess datetime time
 
 ---
 
-## **⚙️ How It Works**
+## ** How It Works**
 1. The script **monitors the system clock**.
 2. When the **current time reaches the 50th minute of an hour**, it executes the tasks sequentially:
    - **Program 1:** `camera_analytics.py`
@@ -57,7 +57,7 @@ pip install subprocess datetime time
 
 ---
 
-## **📍 How to Run the Scheduler**
+## ** How to Run the Scheduler**
 ### **1️⃣ Start the Scheduler**
 Run the following command to **start the scheduling process**:
 ```bash
@@ -77,7 +77,7 @@ nohup python scheduler.py &
 
 ---
 
-## **🛠️ Troubleshooting**
+## ** Troubleshooting**
 ### **1️⃣ Programs not running**
 - Verify that **all script paths** in `scheduler.py` are correct.
 - Check if the scripts have **execution permissions** (`chmod +x script.py`).
@@ -92,7 +92,7 @@ nohup python scheduler.py &
 
 ---
 
-## **🚀 Future Enhancements**
+## ** Future Enhancements**
 📌 **Implement logging** to record execution status.  
 📌 **Add multi-threading** for parallel execution of tasks.  
 📌 **Integrate email notifications** for execution status.  
@@ -100,10 +100,10 @@ nohup python scheduler.py &
 
 ---
 
-## **📜 License**
+## ** License**
 This project is open-source under the **MIT License**. Feel free to contribute!
 
 ---
 
-### **📧 Need Help?**
+### ** Need Help?**
 For questions or contributions, open an **issue** in the GitHub repository! 🚀
