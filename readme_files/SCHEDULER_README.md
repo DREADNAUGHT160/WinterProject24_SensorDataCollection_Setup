@@ -105,5 +105,5 @@ This project is open-source under the **MIT License**. Feel free to contribute!
 
 ---
 
-### ** Need Help?**
+### **Need Help?**
 For questions or contributions, open an **issue** in the GitHub repository! 🚀
