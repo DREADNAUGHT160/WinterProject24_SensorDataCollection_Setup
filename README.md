@@ -177,7 +177,7 @@ This project integrates a **disdrometer sensor** with **Radar, LiDAR, and Camera
 
 
 
-### 📌 **Overview**
+###  **Overview**
 - **Real-time disdrometer readings** control whether sensor data is logged.
 - **Adjustable thresholds** allow fine-tuning of rain detection parameters.
 - **Force-save intervals** ensure data is stored periodically, even in bad weather.
@@ -195,7 +195,7 @@ These values determine whether sensor data should be **collected, paused, or sav
 
 
 
-### 🔍 **Filtering Criteria**
+###  **Filtering Criteria**
 | **Parameter**           | **Threshold**                 | **Effect on Data Collection** |
 |------------------------|-----------------------------|------------------------------|
 | **Total Precipitation** | **> 1.0 mm/h**              | 🚫 Stops logging to avoid noise in LiDAR/Radar |
@@ -205,7 +205,7 @@ These values determine whether sensor data should be **collected, paused, or sav
 
 
 
-### 📊 **Impact on Sensor Data Logging**
+###  **Impact on Sensor Data Logging**
 | **Sensor**  | **Filtered by Rain?** | **Condition** |
 |------------|---------------------|------------------------|
 | **LiDAR**  | ✅ Yes | Stops when **no rain** is detected |
@@ -215,20 +215,20 @@ These values determine whether sensor data should be **collected, paused, or sav
 
 
 
-### ⚡ **Force-Save Mechanism**
+###  **Force-Save Mechanism**
 - Ensures **data is saved periodically**, regardless of rain conditions.
 - Prevents **gaps in time-series data**.
 - Helps in **long-term sensor fusion analysis**.
 
 
 
-### 📌 **Example Filtering Workflow**
+###  **Example Filtering Workflow**
 1️⃣ **Heavy Rain Detected (> Visibility: 1800m) → Data Collection Stops**  
 2️⃣ **Light Drizzle (>0.5 mm/h, ) → Data Collection Continues**  
 3️⃣ **Force-Save Triggered → Data Stored Regardless of Conditions** 
 
 
-### 🚀 **Why Use Rain-Based Filtering?**
+###  **Why Use Rain-Based Filtering?**
 ✅ **Reduces sensor noise** in **LiDAR & Radar**  
 ✅ **Saves storage space** by avoiding bad weather data  
 ✅ **Ensures clear images** for camera-based AI models  
